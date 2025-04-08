@@ -1,3 +1,5 @@
+vkBridge.send('VKWebAppInit').catch(e => console.error('Bridge init error:', e));
+
 document.addEventListener("DOMContentLoaded", function() {
     // Элементы страницы
     const startScreen = document.getElementById("startScreen");
