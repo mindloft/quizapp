@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; /* Выравнивание по центру */
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+h1 {
+    color: #45688E; /* Синий цвет заголовка */
+}
+button {
+    padding: 10px 20px;
+    background: #5181B8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background: #3A6EA5;
+}
+
+/* Стили для вариантов ответа */
+.option {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #5181B8; /* Темно-синий фон */
+    color: white; /* Белый текст */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.option:hover {
+    background: #3A6EA5; /* Чуть темнее при наведении */
+}
+
+.option.selected {
+    background: #2A5885; /* Самый темный синий для выбранного */
+    box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #5181B8; /* Белая обводка */
+}
+
+/* Стили для вопроса */
+#questionText {
+    color: #45688E; /* Синий цвет вопроса */
+}
+
+
+#progressCounter {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Для вопросов с множественным выбором */
+.option.multiple {
+    background: #f8f9fa;
+    color: #212529;
+    border: 2px solid #6c757d;
+}
+
+.option.multiple.selected {
+    background: #6c757d;
+    color: white;
+    border-color: #6c757d;
+}
+
+/* Иконка множественного выбора */
+.option.multiple::before {
+    content: "✓";
+    margin-right: 8px;
+    opacity: 0;
+}
+
+.option.multiple.selected::before {
+    opacity: 1;
+}
+
+
+/* Стили кнопок навигации */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.nav-button {
+    padding: 8px 15px;
+    background: #6c757d; /* Насыщенный серый для активных кнопок */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.nav-button:hover {
+    background: #5a6268; /* Темнее при наведении */
+}
+
+.nav-button:disabled {
+    background: #d3d3d3; /* Светло-серый для неактивных */
+    color: #6c757d; /* Текст темнее фона */
+    cursor: not-allowed;
+}
+
+#prevButton {
+    margin-right: auto; /* Прижимаем к левому краю */
+}
+
+#nextButton {
+    margin-left: auto; /* Прижимаем к правому краю */
+}
+
+/* Подсказка о типе вопроса */
+.question-hint {
+    color: #6c757d;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.completion-screen {
+    text-align: center;
+    padding: 20px;
+}
+
+.completion-screen h2 {
+    color: #45688E;
+    margin-bottom: 15px;
+}
+
+#restartButton {
+    padding: 10px 20px;
+    background: #5181B8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#restartButton:hover {
+    background: #3A6EA5;
+}
+
+.comparison-screen {
+    text-align: center;
+    padding: 20px;
+}
+
+.question-result {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.match {
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.match-yes {
+    background: #d4edda;
+    color: #155724;
+}
+
+.match-no {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.secondary {
+    background: #6c757d;
+    margin-top: 10px;
+}

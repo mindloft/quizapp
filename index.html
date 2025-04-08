@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос для друзей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Шаг 1: Стартовый экран -->
+        <div id="startScreen">
+            <h1>Насколько вы совместимы?</h1>
+            <button id="startButton">Начать опрос</button>
+        </div>
+
+        <!-- Шаг 2: Экран вопроса (изначально скрыт) -->
+        <!-- Экран вопроса (изначально скрыт) -->
+<div id="quizScreen" style="display: none;">
+    <!-- Счётчик прогресса - добавляется ПЕРЕД вопросом -->
+    <div id="progressCounter" style="margin-bottom: 15px; color: #45688E;">
+        Вопрос <span id="currentQuestion">1</span> из <span id="totalQuestions">3</span>
+    </div>
+    
+    <h2 id="questionText">Вопрос будет здесь</h2>
+    <div id="optionsContainer"></div>
+
+    <div class="navigation">
+        <button id="prevButton" class="nav-button">← Назад</button>
+        <button id="nextButton" class="nav-button">Вперёд →</button>
+    </div>
+
+</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
