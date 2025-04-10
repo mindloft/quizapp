@@ -1,4 +1,11 @@
-vkBridge.send('VKWebAppInit').catch(e => console.error('Bridge init error:', e));
+vkBridge.send('VKWebAppInit');
+
+vkBridge.send('VKWebAppGetUserInfo').then(data => {
+    console.log('User info:', data);
+}).catch(error => {
+    console.log(error);
+});
+
 
 document.addEventListener("DOMContentLoaded", function() {
     // Элементы страницы
